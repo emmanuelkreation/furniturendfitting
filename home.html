@@ -471,6 +471,86 @@
     hr {
       margin: 24px 0;
     }
+
+    /* ===== NEW BG IMAGE STYLES (only added these) ===== */
+    .hero-bg {
+      background-image: url('https://images.unsplash.com/photo-1616046229478-2461c2c8c6a4?w=1600&auto=format');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      isolation: isolate;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: -1;
+    }
+    .hero-bg .hero-content,
+    .hero-bg .hero-buttons,
+    .hero-bg .hero-bullets,
+    .hero-bg p,
+    .hero-bg h1 {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+    }
+    .hero-bg .hero-bullets i {
+      color: #C87A3E !important;
+    }
+    .hero-bg .btn-secondary {
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(4px);
+      border-color: white;
+      color: white;
+    }
+    .hero-bg .btn-secondary:hover {
+      background: white;
+      color: #1E1E1E;
+    }
+
+    .emotional-bg {
+      background-image: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&auto=format');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      isolation: isolate;
+    }
+    .emotional-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+    .emotional-bg .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-bg {
+      background-image: url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1600&auto=format');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      isolation: isolate;
+    }
+    .cta-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: -1;
+    }
+    .cta-bg .container {
+      position: relative;
+      z-index: 2;
+    }
+    .cta-bg .section-title,
+    .cta-bg p {
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -490,8 +570,8 @@
   </div>
 </header>
 
-<!-- Hero Section -->
-<section id="home" class="hero">
+<!-- Hero Section (with background image) -->
+<section id="home" class="hero hero-bg">
   <div class="container hero-content">
     <h1>The silence of an empty room is an invitation.<br>Let’s give it a voice.</h1>
     <p style="font-size:1.2rem; margin: 20px 0;">Premium Furniture & Interior Fittings — Bespoke, Installed, Loved.</p>
@@ -588,8 +668,8 @@
   </div>
 </section>
 
-<!-- Emotional Pull -->
-<section style="background: #1E1E1E; color: white;">
+<!-- Emotional Pull (with background image) -->
+<section class="emotional-bg" style="background: #1E1E1E; color: white;">
   <div class="container" style="text-align:center;">
     <h2 style="font-size: 2.2rem;">Close your eyes. Walk into your dream space.</h2>
     <p style="margin: 28px auto; max-width: 700px; font-size: 1.1rem;">The morning light hits a bookshelf that holds your favorite novels. Your hand runs along a dining table so smooth it feels like water. This isn’t a fantasy. It’s Tuesday next month.</p>
@@ -621,8 +701,8 @@
   </div>
 </section>
 
-<!-- Action Section -->
-<section>
+<!-- Action Section / CTA (with background image) -->
+<section class="cta-bg">
   <div class="container" style="text-align:center;">
     <h2 class="section-title">Ready to Stop Compromising?</h2>
     <p>Let’s talk about your space. You'll get: free quote within 24h, 3D design concept, dedicated project manager.</p>
